@@ -2,7 +2,7 @@ class CalendarsController < ApplicationController
 
   # １週間のカレンダーと予定が表示されるページ
   def index
-    getweek
+    get_week
     # getWeek
     # isuue 2
     @plan = Plan.new
@@ -20,7 +20,7 @@ class CalendarsController < ApplicationController
     params.require(:calendars).permit(:date, :plan)
   end
 
-  def getweek
+  def get_week
 # def getWeek
 # isuue 2
     wdays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
